@@ -1,0 +1,108 @@
+.backend .container {
+    grid-template-rows: min-content repeat(3, min-content);
+    grid-template-areas:
+        "header header header header header header"
+        "backend backend backend backend backend backend"
+        "form form form form form form"
+        "foot foot foot foot foot foot";
+}
+
+.backend .section-backend{
+    grid-area: backend;
+    display: grid;
+    grid-template-columns: 5rem minmax(min-content, 1fr) 5rem;
+    row-gap: 3rem;
+    margin: 10rem 0;
+}
+
+.backend .section-backend .hasError,
+.backend .section-backend .spinner {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.backend .section-backend .spinner {
+    margin: 0;
+}
+
+.backend .backend__table {
+    grid-column: 2;
+    overflow-x:auto;
+}
+
+.backend .backend__table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.backend .backend__table td, .backend .backend__table th {
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    padding: 2rem;
+}
+
+.backend .backend__table th {
+    text-align: left;
+    background-color: rgb(244, 92, 67);
+    color: white;
+}
+
+.backend .backend__table .fa-check {
+    color: #04AA6D;
+}
+
+.backend .backend__table .fa-times {
+    color: brown;
+}
+
+.backend .backend__table td a {
+    cursor: pointer;
+}
+
+
+
+.modal__backend form {
+    width: 100%;
+    grid-row: 0;
+    grid-column: 1 / -1;
+}
+
+.modal__backend .h2__heading {
+    grid-row: 1;
+}
+
+.modal__backend form input,
+.modal__backend form textarea {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border: solid 1px #333;
+    width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.modal__backend form textarea {
+    min-height: 15rem;
+}
+
+.modal__backend button {
+    grid-column: 1 / -1;
+    width: 20rem;
+    color: var(--blanco);
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+}
+
+.backend .form__msg.msg__error,
+.backend .form__msg.msg__ok {
+    grid-column: 2;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}

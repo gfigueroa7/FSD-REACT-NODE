@@ -1,0 +1,111 @@
+.detail .container {
+    grid-template-areas: 
+        "header header header header header header"
+        "list list list list list list"
+        "foot foot foot foot foot foot";
+}
+
+.detail .section-content {
+    grid-area: list;
+    background-color: #f7f7f7;
+    padding-top: 25rem;
+    margin-top: -20vh;
+}
+
+.detail .content__detail {
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-columns: 5rem min-content minmax(min-content, 1fr) 1fr 5rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 10rem;
+}
+
+.detail .content__detail h2 {
+    grid-column: 2;
+    text-align: left;
+}
+
+.detail .content__detail a {
+    grid-column: 4;
+    justify-self: end;
+}
+
+.detail .content__detail button {
+    margin-top: 0;
+    color: var(--blanco);
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+    width: 20rem;
+}
+
+.detail .content__detail .detail__img {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.detail .content__detail .detail__img img {
+    width: 35rem;
+}
+
+.detail .content__detail .detail__info {
+    grid-row: 2;
+    grid-column: 3;
+
+    display: grid;
+    align-items: center;
+}
+
+.detail .content__detail .detail__info a {
+    background-image: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.detail .content__detail .detail__info .info__A p {
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.detail .content__detail .detail__info .info__A .info__title {
+    width: 13rem;
+}
+
+.detail .content__detail .detail__info .info__A p b {
+    width: 3rem;
+}
+
+.detail .content__detail .detail__map {
+    grid-row: 2;
+    grid-column: 4;
+    position: relative;
+}
+
+.detail .content__detail .detail__map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail .content__detail .detail__map a {
+    font-size: 2rem;
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.5), rgba(235, 51, 73, 0.5));
+    padding: 2rem;
+    list-style-type: none;
+    color: #FFF;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 18;
+}
+
+.detail .content__detail p{
+    grid-row: 3;
+    grid-column: 2 / 4;
+}

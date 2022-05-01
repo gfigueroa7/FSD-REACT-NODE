@@ -1,0 +1,101 @@
+.blog .container {
+    grid-template-rows: min-content repeat(3, min-content);
+    grid-template-areas:
+        "header header header header header header"
+        "blog blog blog blog blog blog"
+        "form form form form form form"
+        "foot foot foot foot foot foot";
+}
+
+.blog .section-blog{
+    grid-area: blog;
+    display: grid;
+    grid-template-columns: 5rem minmax(min-content, 1fr) 5rem;
+    row-gap: 3rem;
+    margin: 15rem 0;
+}
+
+.blog .section-blog .hasError,
+.blog .section-blog .spinner {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+.blog .section-blog .spinner {
+    margin: 0;
+}
+
+.blog .section-blog .post {
+    grid-column: 2;
+    font-size: 1.7rem;
+    padding: 3rem;
+    border: solid 1px #DDD;
+}
+
+.blog .section-blog .post div {
+    display: grid;
+    align-items: center;
+}
+
+.blog .section-blog .post div p{
+    text-align: right;
+    grid-row: 1;
+}
+
+.blog .section-blog .post .author {
+    background-color: rgba(235, 51, 73, 0.8);
+    padding: 4px;
+    color: #fff;
+    border-radius: 15px;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1rem;
+}
+
+.blog .section-blog .post h3 {
+    grid-row: 1;
+    margin: 2rem 0;
+}
+
+.blog .section-form{
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 5rem minmax(min-content, 1fr) 5rem;
+    margin-bottom: 15rem;
+}
+
+.blog .section-form form{
+    grid-column: 2;
+}
+
+.blog section form {
+    width: 100%;
+}
+
+.blog section form input,
+.blog section form textarea {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border: solid 1px #333;
+    width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.blog section button{
+    color: var(--blanco);
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+}
+
+.blog .form__msg.msg__error,
+.blog .form__msg.msg__ok {
+    grid-column: 2;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}

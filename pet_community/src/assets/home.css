@@ -1,0 +1,712 @@
+/* MAIN */
+main {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    
+    grid-area: main;
+}
+
+.header__second {
+    display: none;
+}
+
+/* MAIN > SECTION-ABOUT */
+.section-about {
+    display: grid;
+    grid-template-columns: 5rem repeat(2, minmax(min-content, 1fr)) 5rem;
+
+    column-gap: 2rem;
+    row-gap: 10rem;
+    
+    background-color: #f7f7f7;
+    padding: 25rem 0 45rem 0;
+    margin-top: -20vh;
+}
+
+.about__text {
+    grid-column: 2 / 3;
+}
+
+.about__text h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.about__text .paragraph {
+    font-size: 1.6rem;
+}
+
+.about__text .paragraph:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.about__photo {
+    grid-column: 3 / 4;
+    position: relative;
+}
+
+.about__photo img {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgb(0 0 0 / 40%);
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+    outline-offset: 2rem;
+}
+
+.about__photo .about__photo--p1 {
+    left: 0;
+    top: -2rem;
+}
+
+.about__photo .about__photo--p2 {
+    right: 0;
+    top: 2rem;
+}
+
+.about__photo .about__photo--p3 {
+    left: 20%;
+    top: 10rem;
+}
+
+.about__photo img:hover {
+    outline: 1.5rem solid #EB3349;
+    transform: scale(1.07) translateY(-.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0,0,0, .5);
+    z-index: 20;
+}
+
+.about__photo:hover img:not(:hover) {
+    transform: scale(0.95);
+}
+
+/* MAIN > SECTION-FEATURES */
+.section-features {
+    align-items: center;
+
+    padding: 20rem 0;
+    text-align: center;
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+    background-size: cover;
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+}
+
+.features__box {
+    display: grid;
+    grid-template-columns: 5rem repeat(4, 1fr) 5rem ;
+
+    column-gap: 2rem;
+    transform: skewY(7deg);
+}
+
+.features__card--1 {
+    grid-column: 2 / 3;
+}
+
+.features__card--2 {
+    grid-column: 3 / 4;
+}
+
+.features__card--3 {
+    grid-column: 4 / 5;
+}
+
+.features__card--4 {
+    grid-column: 5 / 6;
+}
+
+.features__card {
+    display: grid;
+    align-content: center;
+
+    background-color: rgba(255,255,255,0.8);
+    height: 35rem;
+    font-size: 1.6rem;
+    transition: transform .3s;
+}
+
+.features__card:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+}
+
+.features__card i {
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    display: inline-block;
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.features__card h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+
+
+
+
+/* PARTNERS */
+.section-partners {
+    display: grid;
+    grid-template-columns: 5rem repeat(3, 1fr) 5rem;
+
+    column-gap: 3rem;
+    row-gap: 10rem;
+
+    grid-area: part;
+
+    padding: 25rem 0 15rem 0;
+    text-align: center;
+    background-color: #f7f7f7;
+    margin-top: -20vh;
+    
+}
+
+.partners__card {
+    position: relative;
+    background-color: var(--blanco);
+}
+
+.partners__card--1 {
+    grid-column: 2 / 3;
+}
+
+.partners__card--2 {
+    grid-column: 3 / 4;
+
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,.2);
+    transform: translateY(-1.5rem) scale(1.03);
+}
+
+.partners__card--3 {
+    grid-column: 4 / 5;
+}
+
+.card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card__picture--1 {
+    background-image: linear-gradient(to right bottom, #e48e38, #CD7F32),url(./img/dog-partner-3.jpg);
+}
+.card__picture--2 {
+    background-image: linear-gradient(to right bottom, #D4AF37, #eec53d),url(./img/dog-partner-4.jpg);
+    background-position: center;
+}
+.card__picture--3 {
+    background-image: linear-gradient(to right bottom, #b4b4b4, #C0C0C0),url(./img/dog-partner-3.jpg);
+}
+
+.card__heading{
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.card__heading-span--1 {
+    background-image: linear-gradient(to right bottom, rgba(228, 142, 56,0.85), rgba(205,127,50,0.85));
+}
+.card__heading-span--2 {
+    background-image: linear-gradient(to right bottom, rgba(212, 175, 55,0.85), rgba(238, 197, 61,0.85));
+}
+.card__heading-span--3 {
+    background-image: linear-gradient(to right bottom, rgba(180,180,180,0.85), rgba(192,192,192,0.85));
+}
+
+.card__details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card__details ul li:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.card__details ul li {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.card__details {
+    padding: 3rem;
+}
+
+.partners__card--1 .card__details ul {
+    padding-bottom: 25px;
+}
+
+.card__details button, 
+.card__details button:link, 
+.card__details button:visited {
+    width: 100%;
+    color: var(--blanco);
+}
+
+.partners__card--1 .btn__button, 
+.partners__card--1 .btn__button:link, 
+.partners__card--1 .btn__button:visited {
+    background-image: linear-gradient(to right bottom, rgba(228, 142, 56,0.85), rgba(205,127,50,0.85));
+}
+.partners__card--1 .btn__button::after {
+    background-image: linear-gradient(to right bottom, rgba(228, 142, 56,0.85), rgba(205,127,50,0.85));
+}
+
+.partners__card--2 .btn__button, 
+.partners__card--2 .btn__button:link, 
+.partners__card--2 .btn__button:visited {
+    background-image: linear-gradient(to right bottom, rgba(212, 175, 55,0.85), rgba(238, 197, 61,0.85));
+}
+.partners__card--2 .btn__button::after {
+    background-image: linear-gradient(to right bottom, rgba(212, 175, 55,0.85), rgba(238, 197, 61,0.85));
+}
+
+.partners__card--3 .btn__button, 
+.partners__card--3 .btn__button:link, 
+.partners__card--3 .btn__button:visited {
+    background-image: linear-gradient(to right bottom, rgba(180,180,180,0.85), rgba(192,192,192,0.85));
+}
+.partners__card--3 .btn__button::after {
+    background-image: linear-gradient(to right bottom, rgba(180,180,180,0.85), rgba(192,192,192,0.85));
+}
+/* MODAL */
+.ReactModalPortal,
+.ReactModal__Overlay {
+    z-index: 9999;
+}
+.ReactModal__Content {
+    top: 50%!important;
+    left: 50%!important;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    background-size: cover!important;
+    background-blend-mode: screen;
+}
+
+.modal_content {
+    display: grid;
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: min-content repeat(2, minmax(min-content, 1fr)) min-content;
+    grid-gap: 3rem;
+}
+
+.modal_content .card__heading {
+    grid-row: 1;
+    grid-column: 2 / 4;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.modal_content .card__details {
+    grid-row: 2;
+    grid-column: 2;
+    padding: 0;
+}
+
+.modal_content .closeModal {
+    grid-row: 1;
+    grid-column: 4;
+    border: none;
+    background: none;
+    color: #777;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.modal_content form {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.modal_content form input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    background-color: rgba(255,255,255,.5);
+    border: solid 1px #333;
+    width: 100%;
+    display: block;
+}
+
+.modal_content form button {
+    color: var(--blanco);
+}
+
+.modal_content .form__msg {
+    font-size: 1.5rem;
+    grid-column: 2 / 4;
+    text-align: center;
+}
+
+.form__msg.msg__ok {
+    color: darkgreen;
+}
+
+.form__msg.msg__error {
+    color: #EB3349;
+}
+
+
+/* CONTACTO */
+.section-contacto {
+    display: grid;
+    grid-template-columns: 5rem repeat(1, 1fr) 5rem;
+
+    column-gap: 3rem;
+    row-gap: 10rem;
+
+    grid-area: contacto;
+
+    padding: 15rem 0;
+    text-align: center;
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+    
+}
+
+.contacto__card {
+    grid-column: 2 / 3;
+    background-image: linear-gradient(105deg, rgba(243, 243, 243, 0.9) 0%, rgba(243, 243, 243, 0.9) 50%, transparent 50%), url("./img/group-portrait-adorable-puppies.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0, .2);
+}
+
+.contacto__card form {
+    width: 50%;
+    padding: 6rem;
+}
+
+.contacto__card .h2__heading {
+    margin-bottom: 3rem;
+}
+
+.contacto__card .form__group {
+    text-align: left;
+}
+
+.contacto__card .form__group:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.contacto__card .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    background-color: rgba(255,255,255,.5);
+    border: none;
+    border-bottom: solid 3px transparent;
+    width: 100%;
+    display: block;
+}
+
+.contacto__card .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .1);
+    border-bottom: solid 3px #EB3349;
+}
+
+.contacto__card .form__input:focus:invalid {
+    border-bottom: solid 3px #e48e38;
+}
+
+.contacto__card .form__label {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    display: block;
+    transition: all .3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+.contacto__card button, 
+.contacto__card button:link, 
+.contacto__card button:visited {
+    color: var(--blanco);
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+}
+.contacto__card button::after {
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+}
+
+
+
+
+
+/* LOGOS */
+.section-logos {
+    display: grid;
+    grid-template-rows: 150px repeat(3, min-content);
+    grid-template-columns: 5rem repeat(3, 1fr) 5rem;
+    grid-template-areas: 
+        "logohead logohead logohead logohead logohead"
+        ". logobox1 logobox1 logobox1 ."
+        ". logobox2 logobox2 logobox2 ."
+        ". logobox3 logobox3 logobox3 .";
+    
+    align-items: center;
+    row-gap: 7rem;
+
+    grid-area: logos;
+
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.section-logos .h2__heading {
+    grid-area: logohead;
+}
+
+.logos__box--1 {
+    grid-area: logobox1;
+}
+
+.logos__box--2 {
+    grid-area: logobox2;
+}
+
+.logos__box--3 {
+    grid-area: logobox3;
+}
+
+.logos__card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 1fr));
+    align-items: center;
+    justify-items: center;
+}
+
+.logos__box .card__heading {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
+.logos__box .card__heading span {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 990px){
+    .section-about {
+        grid-template-columns: 1rem repeat(2, minmax(min-content, 1fr)) 1rem;
+        padding: 25rem 0 20rem 0;
+    }
+
+    .about__photo .about__photo--p1 {
+        left: 0;
+        top: 5rem;
+    }
+    
+    .about__photo .about__photo--p2 {
+        right: 0;
+        top: 9rem;
+    }
+    
+    .about__photo .about__photo--p3 {
+        left: 20%;
+        top: 17rem;
+    }
+
+    .features__box {
+        grid-template-columns: 1rem repeat(4, 1fr) 1rem;
+    }
+
+    .section-partners {
+        grid-template-columns: 1rem repeat(3, 1fr) 1rem;
+        column-gap: 2rem;
+    }
+
+    .section-contacto {
+        grid-template-columns: 1rem repeat(1, 1fr) 1rem;
+    }
+
+    .section-logos {
+        grid-template-columns: 1rem repeat(3, 1fr) 1rem;
+    }
+
+    .card__details {
+        padding: 1rem;
+    }
+
+    .card__details ul {
+        width: 100%;
+    }
+
+    .section-contacto {
+        padding: 5rem 0;
+    }
+
+    .contacto__card form {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .features__card {
+        padding: 0 2rem;
+    }
+
+    .contacto__card {
+        background-image: linear-gradient(0deg, rgba(243, 243, 243, 0.9) 0%, rgba(243, 243, 243, 0.9) 50%), url(./img/group-portrait-adorable-puppies.jpg);
+    }
+}
+
+@media (max-width: 767px){
+    .bm-burger-button {
+        right: 4rem;
+        top: 5rem;
+    }
+
+    header {
+        row-gap: 0rem;
+    }
+
+    button.btn__button, button.btn__button:link, button.btn__button:visited {
+        margin-top: 0rem;
+    }
+
+    .section-about {
+        grid-template-rows: repeat(3, min-content);
+        grid-template-columns: none;
+        column-gap: 0;
+        row-gap: 10rem;
+        padding: 5rem 3rem 20rem 3rem;
+        margin-top: 0;
+    }
+    .section-features {
+        padding: 10rem 0px;
+    }
+
+    .features__box {
+        grid-template-columns: 1rem 1fr 1rem;
+        column-gap: 2rem;
+        row-gap: 5rem;
+        justify-content: center;
+    }
+
+    .about__photo {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(min-content, 1fr));
+        column-gap: 3rem;
+        grid-column: auto;
+    }
+
+    .about__text {
+        grid-column: 1 / -1;
+    }
+
+    .about__photo img {
+        width: 100%;
+        position: relative;
+    }
+    .about__photo .about__photo--p1,
+    .about__photo .about__photo--p2,
+    .about__photo .about__photo--p3 {
+        left: 0;
+        top: 0;
+    }
+
+    .features__card--1,
+    .features__card--2,
+    .features__card--3,
+    .features__card--4 {
+        grid-column: 2 / 3;
+        padding: 0 5rem;
+    }
+
+    .section-partners {
+        grid-template-columns: 1rem 1fr 1rem;
+        column-gap: 2rem;
+        padding: 15rem 0 10rem 0;
+        justify-content: center;
+        margin-top: -7vh;
+    }
+
+    .partners__card--1,
+    .partners__card--2,
+    .partners__card--3 {
+        grid-column: 2 / 3;
+    }
+
+    .partners__card--2 {
+        transform: none;
+    }
+
+    .contacto__card .form__group {
+        text-align: center;
+    }
+    .contacto__card button, .contacto__card button:link, .contacto__card button:visited {
+        width: 90%;
+    }
+
+    .logos__card {
+        grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    }
+
+    .logos__card img {
+        width: 100%;
+    }
+
+    .ReactModal__Content {
+        width: 95%;
+        height: 75%;
+    }
+    
+    .modal_content .card__details {
+        grid-column: 2 / 4;
+    }
+    
+    .modal_content form {
+        grid-row: 3;
+        grid-column: 2 / 4;
+    }
+
+    .modal_content form button {
+        margin-top: 2rem;
+    }
+}

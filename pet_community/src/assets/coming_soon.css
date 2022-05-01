@@ -1,0 +1,32 @@
+body {
+    padding: 0rem;
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+/*.comunidad .bm-burger-button {
+    display: none!important;
+}
+
+.comunidad .container {
+    height: 100vh;
+}*/
+
+.coming-soon img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100rem;
+}
+
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 990px){
+    
+    .coming-soon img {
+        width: 100%;
+    }
+}

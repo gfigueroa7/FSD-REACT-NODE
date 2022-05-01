@@ -1,0 +1,153 @@
+.ranking .container {
+    grid-template-areas: 
+        "header header header header header header"
+        "table table table table table table"
+        "foot foot foot foot foot foot";
+}
+
+.ranking .section-content {
+    grid-area: table;
+
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns:  5rem repeat(3, minmax(min-content, 1fr)) 5rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+
+    background-color: #f7f7f7;
+    padding-top: 25rem;
+    margin-top: -20vh;
+}
+
+.ranking .section-content button{
+    color: var(--blanco);
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    position: relative;
+    font-size: 1.6rem;
+    background-color: var(--blanco);
+    color: #FFF;
+    cursor: pointer;
+}
+
+.ranking .btn__veterinary {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.ranking .btn__stores {
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.ranking .btn__trainers {
+    grid-row: 1;
+    grid-column: 4;
+}
+
+.ranking .ranking__content {
+    grid-row: 2;
+    grid-column: 2 / 5;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(min-content, 1fr));
+    justify-items: center;
+    margin-bottom: 5rem;
+}
+
+.ranking .ranking__content .ranking__msg,
+.ranking .ranking__content .hasError {
+    justify-self: center;
+    grid-column: 2 / 6;
+    font-size: 1.7rem;
+}
+
+.ranking .ranking__content .spinner {
+    grid-column: 2 / 6;
+    margin: 0;
+}
+
+.ranking .ranking__content .ranking__title{
+    grid-row: 1;
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(min-content, 1fr));
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    font-size: 1.7rem;
+}
+
+.ranking .ranking__content .ranking__data{
+    grid-column: 1 / -1;
+    justify-items: inherit;
+    width: 100%;
+}
+
+.ranking .ranking__content .ranking__data_info{
+    display: grid;
+    grid-template-columns: repeat(6, minmax(min-content, 1fr));
+    justify-items: inherit;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+
+@media (max-width: 767px){
+    .ranking .section-content {
+        grid-template-rows: repeat(4, min-content);
+        grid-template-columns: 1rem 1fr 1rem;
+        column-gap: 0;
+        margin-top: -15vh;
+    }
+
+    .ranking .btn__veterinary {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    
+    .ranking .btn__stores {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    
+    .ranking .btn__trainers {
+        grid-row: 3;
+        grid-column: 2;
+    }
+
+    .ranking .ranking__content {
+        grid-row: 4;
+        grid-column: 2;
+        grid-template-columns: repeat(5, minmax(min-content, 1fr));
+    }
+
+    .ranking .ranking__content .ranking__msg,
+    .ranking .ranking__content .hasError {
+        grid-column: 2 / 5;
+    }
+
+    .ranking .ranking__content .spinner {
+        grid-column: 2 / 5;
+    }
+
+    .ranking .ranking__content .ranking__title{
+        grid-template-columns: 3rem repeat(4, minmax(min-content, 1fr));
+    }
+
+    .ranking .ranking__content .ranking__data_info{
+        grid-template-columns: 3rem repeat(4, minmax(min-content, 1fr));
+    }
+
+    .ranking .ranking__content .stars{
+        display: none;
+    }
+}

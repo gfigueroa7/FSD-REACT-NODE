@@ -1,0 +1,96 @@
+.login .container {
+    grid-template-areas:
+        "header header header header header header"
+        "about about about about about about"
+        "auth auth auth auth auth auth"
+        "foot foot foot foot foot foot";
+}
+
+.login .section__auth {
+    grid-area: auth;
+
+    display: grid;
+    /*grid-template-rows: 1fr min-content;*/
+    grid-template-columns:  5rem  repeat(2, minmax(min-content, 1fr)) 5rem;
+    justify-items: end;
+    margin: 5rem 0;
+}
+
+.login .section-about {
+    grid-area: about;
+    row-gap: 5rem;
+}
+
+.login .section__login {
+    grid-column: 2/3;
+    width: 80%;
+    padding: 3rem;
+    background-color: #E5E5E5;
+}
+
+.login .section__register {
+    grid-column: 3/4;
+    justify-self: start;
+    width: 80%;
+    padding: 3rem;
+    background-color: #333;
+}
+
+.login section form {
+    width: 100%;
+}
+
+.login section form input,
+.login section form select {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border: solid 1px #333;
+    width: 100%;
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.login section button{
+    color: var(--blanco);
+    background-image: linear-gradient(to right bottom, rgba(244, 92, 67, 0.8), rgba(235, 51, 73, 0.8));
+}
+
+.login .form__msg.msg__error,
+.login .form__msg.msg__ok {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+.login form label {
+    display: flex;
+    color: #FFF;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.login form label input {
+    display: inline-block;
+    width: auto;
+    margin-left: 5px;
+    width: 3rem;
+    height: 3rem;
+}
+
+@media (max-width: 767px){
+    .login .section__auth {
+        grid-template-rows: repeat(2, minmax(min-content, 1fr));
+        grid-template-columns: 1rem repeat(2, minmax(min-content, 1fr)) 1rem;
+    }
+    .login .section__login {
+        grid-row: 1;
+        grid-column: 2 / 4;
+        width: 100%;
+    }
+    .login .section__register {
+        grid-row: 2;
+        grid-column: 2 / 4;
+        width: 100%;
+    }
+}
